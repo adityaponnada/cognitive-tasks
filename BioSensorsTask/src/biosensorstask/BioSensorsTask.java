@@ -23,8 +23,6 @@ public class BioSensorsTask {
         
         GUIMainPage guiMainPage = new GUIMainPage();
         guiMainPage.setVisible(true);
-        
-        
     }
     
 }
