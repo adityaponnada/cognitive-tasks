@@ -5,6 +5,9 @@
  */
 package GUIPages;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  *
  * @author Dharam
@@ -14,8 +17,13 @@ public class SessionOneMatchPage extends javax.swing.JFrame {
     /**
      * Creates new form SessionOneMatchPage
      */
+    
+     int secondsLeft = 10;
+    
+    
     public SessionOneMatchPage() {
         initComponents();
+        startTaskTimer();
     }
 
     /**
@@ -27,17 +35,47 @@ public class SessionOneMatchPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        taskTimerText = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Second left");
+
+        taskTimerText.setFont(new java.awt.Font("sansserif", 1, 48)); // NOI18N
+        taskTimerText.setText("00");
+
+        jLabel3.setText("Question here");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(taskTimerText)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(121, 121, 121))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(313, 313, 313)
+                .addComponent(jLabel3)
+                .addContainerGap(374, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(taskTimerText)))
+                .addGap(54, 54, 54)
+                .addComponent(jLabel3)
+                .addContainerGap(234, Short.MAX_VALUE))
         );
 
         pack();
@@ -79,5 +117,20 @@ public class SessionOneMatchPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    public static javax.swing.JLabel taskTimerText;
     // End of variables declaration//GEN-END:variables
+
+private void startTaskTimer(){
+    
+    CountDownTimer countdownTimer = new CountDownTimer();
+    
+    countdownTimer.start();
+    
+   // taskTimerText.setText(countdownTimer.getTimeLeft());
+
+}
+
+
 }
