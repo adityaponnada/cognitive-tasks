@@ -20,7 +20,7 @@ public class BioSensorsTask {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+    
         GUIMainPage guiMainPage = new GUIMainPage();
         guiMainPage.setVisible(true);
     }
