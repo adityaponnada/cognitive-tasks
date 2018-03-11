@@ -5,19 +5,24 @@
  */
 package biosensorstask;
 
+import GUIPages.GUIMainPage;
+
+
 /**
  *
- * @author Dharam
+ * @author Aditya
  */
 public class BioSensorsTask {
 
     /**
      * @param args the command line arguments
+     * Initialize GUI forms
      */
     public static void main(String[] args) {
         // TODO code application logic here
         
-        // cata was here
+        GUIMainPage guiMainPage = new GUIMainPage();
+        guiMainPage.setVisible(true);
     }
     
 }
