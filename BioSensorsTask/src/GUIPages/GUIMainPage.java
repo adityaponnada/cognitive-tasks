@@ -72,6 +72,7 @@ public class GUIMainPage extends javax.swing.JFrame {
         System.out.println("Testing GUI forms"); //to be replaced later
         SessionOneMatchPage sessionOneMathPage = new SessionOneMatchPage();
         sessionOneMathPage.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
