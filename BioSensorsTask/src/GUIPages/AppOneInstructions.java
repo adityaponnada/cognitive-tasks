@@ -7,14 +7,14 @@ package GUIPages;
 
 /**
  *
- * @author Dharam
+ * @author catalinacumpanasoiu1
  */
-public class GUIMainPage extends javax.swing.JFrame {
+public class AppOneInstructions extends javax.swing.JFrame {
 
     /**
-     * Creates new form GUIMainPage
+     * Creates new form AppOneInstructions
      */
-    public GUIMainPage() {
+    public AppOneInstructions() {
         initComponents();
     }
 
@@ -28,65 +28,72 @@ public class GUIMainPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1900, 900));
 
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel1.setText("Thank you for volunteering for our study!  ");
+        jLabel1.setText("Below you'll see instructions on how to use the app called \"Stop, Breathe and Think\". When you're done reading them, please open the app on the phone provided. ");
+
+        jLabel2.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel2.setText("You will then have 5 minutes to try the app. The instructions will stay on the screen so you can refer back to them. ");
+
+        jLabel3.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel3.setText("We will ask you some questions about the app later on so please use the time to engage with the app. At the end of the 5 minutes, you'll receive further instructions. ");
+
+        jLabel4.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel4.setText("(insert here image with instructions)");
 
         jButton1.setForeground(new java.awt.Color(0, 102, 153));
-        jButton1.setText("Proceed");
+        jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel2.setText("Please follow the instructions on the screen for each task.");
-
-        jLabel3.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel3.setText("Both apps are installed on the phone you have in front of you; the phone is unlocked so you will be able to use the apps when you are asked to.");
-
-        jLabel4.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel4.setText("You will be asked to answer a few questions and try out two apps.");
+        jLabel5.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel5.setText("Press start when you're ready to get the app!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(1709, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(98, 98, 98))
+                .addGap(101, 101, 101))
             .addGroup(layout.createSequentialGroup()
-                .addGap(154, 154, 154)
+                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
+                    .addComponent(jLabel5)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
+                .addContainerGap(285, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(107, 107, 107)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addGap(37, 37, 37))
         );
 
         pack();
@@ -94,13 +101,12 @@ public class GUIMainPage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        // start 5 minute timer (same page displayed; timer not shown)
         System.out.println("Testing GUI forms"); //to be replaced later
         //SessionOneMatchPage sessionOneMathPage = new SessionOneMatchPage();
         //sessionOneMathPage.setVisible(true);
-        //RelaxPage relaxPage = new RelaxPage();
-        //relaxPage.setVisible(true);
-        StressOneInstructions stressOneInstr = new StressOneInstructions();
-        stressOneInstr.setVisible(true);
+        AppTwoInstructions appTwoInstr = new AppTwoInstructions();
+        appTwoInstr.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -121,20 +127,20 @@ public class GUIMainPage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AppOneInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AppOneInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AppOneInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AppOneInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUIMainPage().setVisible(true);
+                new AppOneInstructions().setVisible(true);
             }
         });
     }
@@ -145,5 +151,6 @@ public class GUIMainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }

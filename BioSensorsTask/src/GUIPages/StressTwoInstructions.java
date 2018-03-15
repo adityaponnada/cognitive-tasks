@@ -7,14 +7,14 @@ package GUIPages;
 
 /**
  *
- * @author Dharam
+ * @author catalinacumpanasoiu1
  */
-public class GUIMainPage extends javax.swing.JFrame {
+public class StressTwoInstructions extends javax.swing.JFrame {
 
     /**
-     * Creates new form GUIMainPage
+     * Creates new form StressTwoInstructions
      */
-    public GUIMainPage() {
+    public StressTwoInstructions() {
         initComponents();
     }
 
@@ -28,65 +28,72 @@ public class GUIMainPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1900, 900));
 
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel1.setText("Thank you for volunteering for our study!  ");
+        jLabel1.setText("You will be presented a series of math problems. ");
+
+        jLabel2.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel2.setText("Each problem has two operations and you will see a text box in which you can write your final answer for each problem.");
+
+        jLabel3.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel3.setText("Each operation is timed and you will see the timer on the screen. When time runs out, you will see the next problem.");
+
+        jLabel4.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel4.setText("Your answers will be compared to a known batabase and based on your performance, you will receive a prize (candy) at the end.");
+
+        jLabel5.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel5.setText("If you missed one problem, don't worry. Just try your best to answer correctly as many as you can!");
 
         jButton1.setForeground(new java.awt.Color(0, 102, 153));
-        jButton1.setText("Proceed");
+        jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel2.setText("Please follow the instructions on the screen for each task.");
-
-        jLabel3.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel3.setText("Both apps are installed on the phone you have in front of you; the phone is unlocked so you will be able to use the apps when you are asked to.");
-
-        jLabel4.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel4.setText("You will be asked to answer a few questions and try out two apps.");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(1709, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(98, 98, 98))
             .addGroup(layout.createSequentialGroup()
-                .addGap(154, 154, 154)
+                .addGap(89, 89, 89)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
+                    .addComponent(jLabel5)
                     .addComponent(jLabel4)
                     .addComponent(jLabel3)
+                    .addComponent(jLabel2)
                     .addComponent(jLabel1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(82, 82, 82))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(107, 107, 107)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addGap(68, 68, 68))
         );
 
         pack();
@@ -97,10 +104,8 @@ public class GUIMainPage extends javax.swing.JFrame {
         System.out.println("Testing GUI forms"); //to be replaced later
         //SessionOneMatchPage sessionOneMathPage = new SessionOneMatchPage();
         //sessionOneMathPage.setVisible(true);
-        //RelaxPage relaxPage = new RelaxPage();
-        //relaxPage.setVisible(true);
-        StressOneInstructions stressOneInstr = new StressOneInstructions();
-        stressOneInstr.setVisible(true);
+        AppOneInstructions appOneInstr = new AppOneInstructions();
+        appOneInstr.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -121,20 +126,20 @@ public class GUIMainPage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StressTwoInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StressTwoInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StressTwoInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StressTwoInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUIMainPage().setVisible(true);
+                new StressTwoInstructions().setVisible(true);
             }
         });
     }
@@ -145,5 +150,6 @@ public class GUIMainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
