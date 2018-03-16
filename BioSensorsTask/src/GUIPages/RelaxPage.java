@@ -48,21 +48,23 @@ public class RelaxPage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(365, 365, 365)
+                .addGap(450, 450, 450)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel3)))
+                    .addComponent(jLabel3))
+                .addContainerGap(450, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(265, 265, 265)
                 .addComponent(jLabel1)
                 .addGap(6, 6, 6)
                 .addComponent(jLabel2)
                 .addGap(6, 6, 6)
-                .addComponent(jLabel3))
+                .addComponent(jLabel3)
+                .addContainerGap(270, Short.MAX_VALUE))
         );
 
         pack();
