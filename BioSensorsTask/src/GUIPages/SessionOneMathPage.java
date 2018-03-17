@@ -12,7 +12,7 @@ import java.util.TimerTask;
  *
  * @author Dharam
  */
-public class SessionOneMatchPage extends javax.swing.JFrame {
+public class SessionOneMathPage extends javax.swing.JFrame {
 
     /**
      * Creates new form SessionOneMatchPage
@@ -21,7 +21,7 @@ public class SessionOneMatchPage extends javax.swing.JFrame {
      int secondsLeft = 10;
     
     
-    public SessionOneMatchPage() {
+    public SessionOneMathPage() {
         initComponents();
         startTaskTimer();
     }
@@ -98,20 +98,21 @@ public class SessionOneMatchPage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SessionOneMatchPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SessionOneMathPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SessionOneMatchPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SessionOneMathPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SessionOneMatchPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SessionOneMathPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SessionOneMatchPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SessionOneMathPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SessionOneMatchPage().setVisible(true);
+                new SessionOneMathPage().setVisible(true);
             }
         });
     }
