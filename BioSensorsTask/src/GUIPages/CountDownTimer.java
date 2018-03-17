@@ -24,11 +24,11 @@ public class CountDownTimer {
     timer.cancel();
     //taskTimerText.setText("0");
     System.out.println("Time Left: 0");
-    SessionOneMatchPage.taskTimerText.setText("0");
+    //SessionOneMatchPage.taskTimerText.setText("0");
     } else {
     //taskTimerText.setText(String.valueOf(secondsLeft));
     System.out.println("Time Left: " + String.valueOf(secondsLeft));
-    SessionOneMatchPage.taskTimerText.setText(String.valueOf(secondsLeft));
+    //SessionOneMatchPage.taskTimerText.setText(String.valueOf(secondsLeft));
     }
     }
     };
