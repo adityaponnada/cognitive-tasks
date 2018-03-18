@@ -5,6 +5,7 @@
  */
 package GUIPages;
 
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -17,13 +18,15 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     /**
      * Creates new form SessionOneMatchPage
      */
-    
-     int secondsLeft = 10;
-    
-    
+    int secondsLeft = 10;
+    public Timer timer;
+    public TimerTask timerTask;
+
     public SessionOneMathPage() {
         initComponents();
+        generateProblem();
         startTaskTimer();
+        startTimer();
     }
 
     /**
@@ -38,6 +41,13 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         taskTimerText = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        firstNumber = new javax.swing.JLabel();
+        firstOperator = new javax.swing.JLabel();
+        secondNumber = new javax.swing.JLabel();
+        secondOperator = new javax.swing.JLabel();
+        thirdNumber = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        answerTextBox = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,36 +56,84 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         taskTimerText.setFont(new java.awt.Font("sansserif", 1, 48)); // NOI18N
         taskTimerText.setText("00");
 
-        jLabel3.setText("Question here");
+        jLabel3.setText("Please select the correct answer within 10 seconds:");
+
+        firstNumber.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        firstNumber.setText("AA");
+
+        firstOperator.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        firstOperator.setText("OO");
+
+        secondNumber.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        secondNumber.setText("AA");
+
+        secondOperator.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        secondOperator.setText("OO");
+
+        thirdNumber.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        thirdNumber.setText("AA");
+
+        jLabel2.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        jLabel2.setText("=");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(taskTimerText)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(121, 121, 121))
             .addGroup(layout.createSequentialGroup()
-                .addGap(313, 313, 313)
-                .addComponent(jLabel3)
-                .addContainerGap(374, Short.MAX_VALUE))
+                .addGap(115, 115, 115)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(firstNumber)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(firstOperator)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(secondNumber)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(secondOperator)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(thirdNumber)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
+                        .addComponent(taskTimerText)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addGap(131, 131, 131))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
+                        .addGap(51, 51, 51)
+                        .addComponent(taskTimerText))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(taskTimerText)))
-                .addGap(54, 54, 54)
-                .addComponent(jLabel3)
-                .addContainerGap(234, Short.MAX_VALUE))
+                        .addGap(74, 74, 74)
+                        .addComponent(jLabel3)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(thirdNumber)
+                            .addComponent(secondOperator)
+                            .addComponent(secondNumber)
+                            .addComponent(firstOperator)
+                            .addComponent(firstNumber)
+                            .addComponent(jLabel2)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         pack();
@@ -118,20 +176,78 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField answerTextBox;
+    private javax.swing.JLabel firstNumber;
+    private javax.swing.JLabel firstOperator;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel secondNumber;
+    private javax.swing.JLabel secondOperator;
     public static javax.swing.JLabel taskTimerText;
+    private javax.swing.JLabel thirdNumber;
     // End of variables declaration//GEN-END:variables
 
-private void startTaskTimer(){
-    
-    CountDownTimer countdownTimer = new CountDownTimer();
-    
-    countdownTimer.start();
-    
-   // taskTimerText.setText(countdownTimer.getTimeLeft());
+    private void startTaskTimer() {
 
-}
+        timer = new Timer();
+        timerTask = new TimerTask() {
+            public void run() {
+                secondsLeft--;
+                if (secondsLeft < 0) {
+                    timer.cancel();
+                    generateProblem();
 
+                } else {
+
+                    //set text for timer here
+                    taskTimerText.setText(String.valueOf(secondsLeft));
+
+                }
+
+            }
+        };
+    }
+
+    public void startTimer() {
+        System.out.println("Inside on start");
+        timer.scheduleAtFixedRate(timerTask, 1000, 1000);
+    }
+
+    private String generateRandomNumbers() {
+
+        int max = 50;
+        int min = -5;
+
+        Random rand = new Random();
+
+        int n = rand.nextInt((max - min) + 1) + min;
+
+        return String.valueOf("(" + n + ")");
+    }
+
+    private String generateRandomOperators() {
+
+        String[] operators = new String[]{"+", "-", "X"};
+
+        int max = 3;
+        int min = 1;
+
+        Random rand = new Random();
+
+        int random = rand.nextInt((max - min) + 1) + min;
+
+        return String.valueOf(operators[random - 1]);
+    }
+
+    private void generateProblem() {
+
+        firstNumber.setText(generateRandomNumbers());
+        firstOperator.setText(generateRandomOperators());
+        secondNumber.setText(generateRandomNumbers());
+        secondOperator.setText(generateRandomOperators());
+        thirdNumber.setText(generateRandomNumbers());
+
+    }
 
 }

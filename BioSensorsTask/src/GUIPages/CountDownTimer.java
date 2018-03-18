@@ -22,13 +22,14 @@ public class CountDownTimer {
     secondsLeft --;
     if (secondsLeft < 0){
     timer.cancel();
-    //taskTimerText.setText("0");
-    System.out.println("Time Left: 0");
-    //SessionOneMatchPage.taskTimerText.setText("0");
+    
+    //System.out.println("Time Left: 0");
+    
     } else {
-    //taskTimerText.setText(String.valueOf(secondsLeft));
-    System.out.println("Time Left: " + String.valueOf(secondsLeft));
-    //SessionOneMatchPage.taskTimerText.setText(String.valueOf(secondsLeft));
+    
+    System.out.println("Time Left: " + getTimeLeft());
+    
+    
     }
     }
     };
@@ -41,7 +42,9 @@ public class CountDownTimer {
     
     public String getTimeLeft(){
     
+        //System.out.println(String.valueOf(secondsLeft));
         return String.valueOf(secondsLeft);
+        
     }
 
     
