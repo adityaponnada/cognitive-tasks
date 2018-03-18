@@ -26,7 +26,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         initComponents();
         generateProblem();
         startTaskTimer();
-        startTimer();
+        //startTimer();
     }
 
     /**
@@ -189,24 +189,35 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void startTaskTimer() {
+        System.out.println("Timer task started");
 
         timer = new Timer();
         timerTask = new TimerTask() {
             public void run() {
                 secondsLeft--;
-                if (secondsLeft < 0) {
+                if (secondsLeft < 1) {
+                    System.out.println("Before timer cancel");
                     timer.cancel();
+                    System.out.println("Timer cancelled");
+                    secondsLeft = 10;
+                    System.out.println("Seconds left reset");   
                     generateProblem();
+                    System.out.println("Problem regenerated");
+                    
+                    startTaskTimer();
+                    //startTimer();
+                       
 
                 } else {
 
                     //set text for timer here
-                    taskTimerText.setText(String.valueOf(secondsLeft));
+                    taskTimerText.setText(String.valueOf(secondsLeft + 1));
 
                 }
 
             }
         };
+        timer.scheduleAtFixedRate(timerTask, 1000, 1000);
     }
 
     public void startTimer() {
