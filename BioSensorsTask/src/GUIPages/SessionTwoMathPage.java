@@ -27,17 +27,57 @@ public class SessionTwoMathPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        changingNumber = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        changingAnswer = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        changingNumber.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        changingNumber.setText("2549");
+
+        jLabel2.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        jLabel2.setText("-");
+
+        jLabel3.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        jLabel3.setText("13");
+
+        jLabel4.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        jLabel4.setText("=");
+
+        changingAnswer.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        changingAnswer.setText("Keep this result in mind");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1772, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(761, 761, 761)
+                .addComponent(changingNumber)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(changingAnswer)
+                .addContainerGap(378, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 458, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(194, 194, 194)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(changingNumber)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(changingAnswer))
+                .addContainerGap(217, Short.MAX_VALUE))
         );
 
         pack();
@@ -79,5 +119,10 @@ public class SessionTwoMathPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel changingAnswer;
+    private javax.swing.JLabel changingNumber;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
