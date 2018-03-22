@@ -9,12 +9,12 @@ package GUIPages;
  *
  * @author catalinacumpanasoiu1
  */
-public class StressTwoInstructions extends javax.swing.JFrame {
+public class SurveyPage extends javax.swing.JFrame {
 
     /**
-     * Creates new form StressTwoInstructions
+     * Creates new form SurveyPage
      */
-    public StressTwoInstructions() {
+    public SurveyPage() {
         initComponents();
     }
 
@@ -29,31 +29,19 @@ public class StressTwoInstructions extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1900, 900));
 
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel1.setText("You will be presented a series of math problems. ");
+        jLabel1.setText("Thank you for completing our study! Please fill in a quick survey (3-5 min) to wrap it up. ");
 
         jLabel2.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel2.setText("Each problem has two operations and you will see a text box in which you can write your final answer for each problem.");
+        jLabel2.setText("Let an experimenter know when you're done with the survey (to receive candy).");
 
-        jLabel3.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel3.setText("Each operation is timed and you will see the timer on the screen. When time runs out, you will see the next problem.");
-
-        jLabel4.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel4.setText("Your answers will be compared to a known batabase and based on your performance, you will receive a prize (candy) at the end.");
-
-        jLabel5.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel5.setText("If you missed one problem, don't worry. Just try your best to answer correctly as many as you can!");
-
-        jButton1.setForeground(new java.awt.Color(0, 102, 153));
-        jButton1.setText("Start");
+        jButton1.setForeground(new java.awt.Color(153, 102, 255));
+        jButton1.setText("TesterButton");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -67,34 +55,24 @@ public class StressTwoInstructions extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
+                        .addGap(300, 300, 300)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(600, 600, 600)
                         .addComponent(jButton1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
+                .addGap(300, 300, 300)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
                 .addGap(50, 50, 50)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jButton1))
         );
 
         pack();
@@ -103,10 +81,8 @@ public class StressTwoInstructions extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         System.out.println("Testing GUI forms"); //to be replaced later
-        //SessionOneMatchPage sessionOneMathPage = new SessionOneMatchPage();
-        //sessionOneMathPage.setVisible(true);
-        AppOneInstructions appOneInstr = new AppOneInstructions();
-        appOneInstr.setVisible(true);
+        RelaxPage relaxPage = new RelaxPage();
+        relaxPage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -127,20 +103,20 @@ public class StressTwoInstructions extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StressTwoInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SurveyPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StressTwoInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SurveyPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StressTwoInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SurveyPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StressTwoInstructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SurveyPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StressTwoInstructions().setVisible(true);
+                new SurveyPage().setVisible(true);
             }
         });
     }
@@ -149,8 +125,5 @@ public class StressTwoInstructions extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
