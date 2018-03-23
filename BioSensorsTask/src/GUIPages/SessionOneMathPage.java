@@ -32,6 +32,8 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     public SessionOneMathPage() {
         initComponents();
         //generateProblem();
+        nextButton.setVisible(false);
+        nextInstructionsText.setVisible(false);
         taskTimerText.setText(String.valueOf(secondsLeft));
         displayProblem(problemCounter);
         startTaskTimer();
@@ -53,6 +55,8 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         answerTextBox = new javax.swing.JTextField();
         questionText = new javax.swing.JLabel();
+        nextButton = new javax.swing.JButton();
+        nextInstructionsText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,53 +73,62 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         questionText.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         questionText.setText("Question comes here");
 
+        nextButton.setText("Next");
+
+        nextInstructionsText.setText("You have completed your first task. Please next for the instructions.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(651, 651, 651)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(651, 651, 651)
-                        .addComponent(questionText)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(questionText)
+                            .addComponent(jLabel3))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(588, 588, 588)
-                        .addComponent(jLabel3)
-                        .addGap(10, 10, 10)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(taskTimerText)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel1))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
-                        .addComponent(taskTimerText)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)
-                        .addGap(362, 362, 362))))
+                        .addComponent(nextInstructionsText, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(nextButton)))
+                .addGap(0, 888, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(taskTimerText)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel1)))
-                .addGap(86, 86, 86)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(questionText))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(211, Short.MAX_VALUE))
+                        .addGap(52, 52, 52)
+                        .addComponent(jLabel3)
+                        .addGap(86, 86, 86))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(76, 76, 76)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(taskTimerText)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(23, 23, 23)))
+                        .addGap(62, 62, 62)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(questionText)
+                    .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nextInstructionsText, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nextButton))
+                .addGap(86, 86, 86))
         );
 
         pack();
@@ -162,6 +175,8 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton nextButton;
+    private javax.swing.JLabel nextInstructionsText;
     private javax.swing.JLabel questionText;
     public static javax.swing.JLabel taskTimerText;
     // End of variables declaration//GEN-END:variables
@@ -192,6 +207,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                     } else {
                     
                         System.out.println("Problem set maxed out. Cannot display any more questions");
+                        displayNextInstructionsText();
                     }
                     
                     //startTimer();
@@ -255,6 +271,13 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     
         questionText.setText(questionSet[i]);
         
+    }
+    
+    private void displayNextInstructionsText(){
+    
+        nextInstructionsText.setVisible(true);
+        nextButton.setVisible(true);
+    
     }
 
 }
