@@ -224,14 +224,12 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                     
                     displayProblem(problemCounter);
                     System.out.println("Problem regenerated");
+                    startTaskTimer();
                     } else {
                     
                         System.out.println("Problem set maxed out. Cannot display any more questions");
                     }
                     
-                    
-                    
-                    startTaskTimer();
                     //startTimer();
                        
 
