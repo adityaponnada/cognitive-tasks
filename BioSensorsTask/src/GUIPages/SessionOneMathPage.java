@@ -21,6 +21,12 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     int secondsLeft = 10;
     public Timer timer;
     public TimerTask timerTask;
+    
+    String[] questionSet = new String[]
+        {"14*6-17", "17*6-19", "13*7-15", "23*9-19", "37*6-23", "26*8-29", 
+        "16*7-17", "27*8-19", "33*7-13","28*9-15", "19*7-17", "17*8-19", 
+        "22*6-13", "14*7-15", "18*5-19", "31*7-19", "13*8-17", "23*7-13", 
+        "17*6-17", "37*3-13", "18*9-19", "26*7-15", "13*9-17", "29*4-19"};
 
     public SessionOneMathPage() {
         initComponents();
@@ -48,6 +54,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         thirdNumber = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         answerTextBox = new javax.swing.JTextField();
+        questionText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,6 +83,8 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
         jLabel2.setText("=");
 
+        questionText.setText("Question comes here");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -100,7 +109,6 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                         .addGap(10, 10, 10)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
@@ -109,6 +117,10 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1)
                         .addGap(362, 362, 362))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(614, 614, 614)
+                .addComponent(questionText)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,7 +145,9 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addComponent(questionText)
+                .addContainerGap(159, Short.MAX_VALUE))
         );
 
         pack();
@@ -182,6 +196,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel questionText;
     private javax.swing.JLabel secondNumber;
     private javax.swing.JLabel secondOperator;
     public static javax.swing.JLabel taskTimerText;

@@ -46,7 +46,6 @@
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="answerTextBox" min="-2" pref="114" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -58,6 +57,11 @@
                       <EmptySpace min="-2" pref="362" max="-2" attributes="0"/>
                   </Group>
               </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="614" max="-2" attributes="0"/>
+              <Component id="questionText" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -90,7 +94,9 @@
                       <Component id="answerTextBox" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="211" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="questionText" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="159" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -166,6 +172,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="answerTextBox">
+    </Component>
+    <Component class="javax.swing.JLabel" name="questionText">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Question comes here"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
