@@ -212,8 +212,9 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         timerTask = new TimerTask() {
             public void run() {
                 secondsLeft--;
-                if (secondsLeft < 1) {
-                    System.out.println("Before timer cancel");
+                System.out.println("Before checking timer: " + String.valueOf(secondsLeft));
+                if (secondsLeft <= 0) {
+                    System.out.println("Before timer cancel: " + String.valueOf(secondsLeft));
                     timer.cancel();
                     System.out.println("Timer cancelled");
                     secondsLeft = 10;
@@ -236,7 +237,8 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                 } else {
 
                     //set text for timer here
-                    taskTimerText.setText(String.valueOf(secondsLeft + 1));
+                    System.out.println("After checking timer: " + String.valueOf(secondsLeft));
+                    taskTimerText.setText(String.valueOf(secondsLeft));
 
                 }
 
