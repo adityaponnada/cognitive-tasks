@@ -32,6 +32,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     public SessionOneMathPage() {
         initComponents();
         //generateProblem();
+        taskTimerText.setText(String.valueOf(secondsLeft));
         displayProblem(problemCounter);
         startTaskTimer();
         //startTimer();
@@ -211,6 +212,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         timer = new Timer();
         timerTask = new TimerTask() {
             public void run() {
+                taskTimerText.setText(String.valueOf(secondsLeft));
                 secondsLeft--;
                 System.out.println("Before checking timer: " + String.valueOf(secondsLeft));
                 if (secondsLeft <= 0) {
@@ -225,6 +227,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                     
                     displayProblem(problemCounter);
                     System.out.println("Problem regenerated");
+                    taskTimerText.setText(String.valueOf(secondsLeft));
                     startTaskTimer();
                     } else {
                     
