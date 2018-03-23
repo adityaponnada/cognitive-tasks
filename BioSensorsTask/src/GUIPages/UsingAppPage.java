@@ -7,14 +7,14 @@ package GUIPages;
 
 /**
  *
- * @author Dharam
+ * @author catalinacumpanasoiu1
  */
-public class GUIMainPage extends javax.swing.JFrame {
+public class UsingAppPage extends javax.swing.JFrame {
 
     /**
-     * Creates new form GUIMainPage
+     * Creates new form UsingAppPage
      */
-    public GUIMainPage() {
+    public UsingAppPage() {
         initComponents();
     }
 
@@ -29,65 +29,42 @@ public class GUIMainPage extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1900, 900));
 
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel1.setText("Thank you for volunteering for our study!  ");
+        jLabel1.setText("Time remaining to use app: (show timer)");
 
-        jButton1.setForeground(new java.awt.Color(0, 102, 153));
-        jButton1.setText("Proceed");
+        jButton1.setForeground(new java.awt.Color(255, 0, 204));
+        jButton1.setText("TesterButton");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel2.setText("Please follow the instructions on the screen for each task.");
-
-        jLabel3.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel3.setText("The app is installed on the phone you have in front of you; the phone is unlocked so you will be able to use the app when you are asked to.");
-
-        jLabel4.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel4.setText("You will be asked to answer a few questions, try out two app features and complete a short survey at the end.");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(600, 600, 600)
-                        .addComponent(jButton1)))
-                .addContainerGap(823, Short.MAX_VALUE))
+                .addGap(300, 300, 300)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(600, 600, 600)
+                .addComponent(jButton1)
+                .addContainerGap(277, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
+                .addGap(300, 300, 300)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(70, 70, 70)
+                .addGap(50, 50, 50)
                 .addComponent(jButton1)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -96,12 +73,8 @@ public class GUIMainPage extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         System.out.println("Testing GUI forms"); //to be replaced later
-        //SessionOneMatchPage sessionOneMathPage = new SessionOneMatchPage();
-        //sessionOneMathPage.setVisible(true);
-        //RelaxPage relaxPage = new RelaxPage();
-        //relaxPage.setVisible(true);
-        ConditionPage conditionPage = new ConditionPage();
-        conditionPage.setVisible(true);
+        SurveyPage surveyPage = new SurveyPage();
+        surveyPage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -122,20 +95,20 @@ public class GUIMainPage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UsingAppPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UsingAppPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UsingAppPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUIMainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UsingAppPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUIMainPage().setVisible(true);
+                new UsingAppPage().setVisible(true);
             }
         });
     }
@@ -143,8 +116,5 @@ public class GUIMainPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
