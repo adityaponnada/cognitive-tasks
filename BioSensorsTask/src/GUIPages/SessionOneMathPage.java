@@ -52,7 +52,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         taskTimerText = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        equalsText = new javax.swing.JLabel();
         answerTextBox = new javax.swing.JTextField();
         questionText = new javax.swing.JLabel();
         nextButton = new javax.swing.JButton();
@@ -67,8 +67,8 @@ public class SessionOneMathPage extends javax.swing.JFrame {
 
         jLabel3.setText("Please select the correct answer within 10 seconds:");
 
-        jLabel2.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
-        jLabel2.setText("=");
+        equalsText.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        equalsText.setText("=");
 
         questionText.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         questionText.setText("Question comes here");
@@ -91,7 +91,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
+                                .addComponent(equalsText)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
@@ -121,7 +121,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                                 .addGap(23, 23, 23)))
                         .addGap(62, 62, 62)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(equalsText)
                     .addComponent(questionText)
                     .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
@@ -172,8 +172,8 @@ public class SessionOneMathPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField answerTextBox;
+    private javax.swing.JLabel equalsText;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton nextButton;
     private javax.swing.JLabel nextInstructionsText;
@@ -208,6 +208,9 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                     
                         System.out.println("Problem set maxed out. Cannot display any more questions");
                         displayNextInstructionsText();
+                        questionText.setText("Task has been completed!");
+                        answerTextBox.setVisible(false);
+                        equalsText.setVisible(false);
                     }
                     
                     //startTimer();

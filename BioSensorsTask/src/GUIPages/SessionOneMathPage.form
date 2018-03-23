@@ -34,7 +34,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <Component id="equalsText" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="answerTextBox" min="-2" pref="114" max="-2" attributes="0"/>
                           </Group>
@@ -77,7 +77,7 @@
                   </Group>
               </Group>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="equalsText" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="questionText" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="answerTextBox" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
@@ -113,7 +113,7 @@
         <Property name="text" type="java.lang.String" value="Please select the correct answer within 10 seconds:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="equalsText">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="sansserif" size="36" style="1"/>
