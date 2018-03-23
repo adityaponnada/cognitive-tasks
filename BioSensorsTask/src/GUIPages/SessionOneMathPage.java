@@ -21,6 +21,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
     int secondsLeft = 10;
     public Timer timer;
     public TimerTask timerTask;
+    int problemCounter = 0;
     
     String[] questionSet = new String[]
         {"14*6-17", "17*6-19", "13*7-15", "23*9-19", "37*6-23", "26*8-29", 
@@ -30,7 +31,8 @@ public class SessionOneMathPage extends javax.swing.JFrame {
 
     public SessionOneMathPage() {
         initComponents();
-        generateProblem();
+        //generateProblem();
+        displayProblem(problemCounter);
         startTaskTimer();
         //startTimer();
     }
@@ -216,8 +218,18 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                     System.out.println("Timer cancelled");
                     secondsLeft = 10;
                     System.out.println("Seconds left reset");   
-                    generateProblem();
+                    //generateProblem();
+                    problemCounter++;
+                    if (problemCounter < questionSet.length){
+                    
+                    displayProblem(problemCounter);
                     System.out.println("Problem regenerated");
+                    } else {
+                    
+                        System.out.println("Problem set maxed out. Cannot display any more questions");
+                    }
+                    
+                    
                     
                     startTaskTimer();
                     //startTimer();
@@ -274,6 +286,12 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         secondOperator.setText(generateRandomOperators());
         thirdNumber.setText(generateRandomNumbers());
 
+    }
+    
+    private void displayProblem(int i){
+    
+        questionText.setText(questionSet[i]);
+        
     }
 
 }
