@@ -5,6 +5,14 @@
  */
 package GUIPages;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author catalinacumpanasoiu1
@@ -79,10 +87,16 @@ public class SurveyPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        System.out.println("Testing GUI forms"); //to be replaced later
-        RelaxPage relaxPage = new RelaxPage();
-        relaxPage.setVisible(true);
+        try {
+            // TODO add your handling code here:
+//        System.out.println("Testing GUI forms"); //to be replaced later
+//        RelaxPage relaxPage = new RelaxPage();
+//        relaxPage.setVisible(true);
+        openSurvey("https://stackoverflow.com/questions/2966334/how-do-i-set-the-colour-of-a-label-coloured-text-in-java");
+        } catch (IOException ex) {
+            Logger.getLogger(SurveyPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -119,6 +133,19 @@ public class SurveyPage extends javax.swing.JFrame {
                 new SurveyPage().setVisible(true);
             }
         });
+    }
+    
+    private void openSurvey(String urlString) throws IOException {
+
+        try {
+            Desktop.getDesktop().browse(new URL(urlString).toURI());
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(SurveyPage.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(SurveyPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
