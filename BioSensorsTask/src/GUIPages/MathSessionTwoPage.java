@@ -18,16 +18,16 @@ public class MathSessionTwoPage extends javax.swing.JFrame {
     /**
      * Creates new form SessionOneMatchPage
      */
-    int secondsLeft = 10;
+    int secondsLeft = 12;
     public Timer timer;
     public TimerTask timerTask;
     int problemCounter = 0;
     
     String[] questionSet = new String[]
-        {"14 X 6 - 17", "17 X 6 - 19", "13 X 7 - 15", "23 X 9 - 19", "37 X 6 - 23", "26 X 8 - 29", 
-        "16 X 7 - 17", "27 X 8 - 19", "33 X 7 - 13","28 X 9 - 15", "19 X 7 - 17", "17 X 8 X 19", 
-        "22 X 6 - 13", "14 X 7 - 15", "18 X 5 - 19", "31 X 7 - 19", "13 X 8 - 17", "23 X 7 - 13", 
-        "17 X 6 - 17", "37 X 3 - 13", "18 X 9 - 19", "26 X 7 - 15", "13 X 9 - 17", "29 X 4 - 19"};
+        {"14 X 6 - 17", "17 X 6 - 19", "13 X 7 - 15", "26 X 8 - 29", "29 X 4 - 19",
+        "16 X 7 - 17", "33 X 7 - 13","28 X 9 - 15", "19 X 7 - 17", "17 X 8 - 19", 
+        "22 X 6 - 13", "14 X 7 - 15", "18 X 5 - 19", "31 X 7 - 19", "13 X 8 - 17", 
+        "17 X 6 - 17", "37 X 3 - 13", "18 X 9 - 19", "26 X 7 - 15", "13 X 9 - 17"};
 
     public MathSessionTwoPage() {
         initComponents();
@@ -59,13 +59,14 @@ public class MathSessionTwoPage extends javax.swing.JFrame {
         nextInstructionsText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1900, 900));
 
         jLabel1.setText("Second left");
 
         taskTimerText.setFont(new java.awt.Font("sansserif", 1, 48)); // NOI18N
         taskTimerText.setText("00");
 
-        jLabel3.setText("Please select the correct answer within 10 seconds:");
+        jLabel3.setText("Please enter the correct answer in the textbox within 10 seconds:");
 
         equalsText.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
         equalsText.setText("=");
@@ -82,53 +83,50 @@ public class MathSessionTwoPage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(651, 651, 651)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(questionText)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(equalsText)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(taskTimerText)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel1))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(nextInstructionsText, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(nextButton)))
-                .addGap(0, 723, Short.MAX_VALUE))
+                .addGap(350, 350, 350)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(taskTimerText)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(questionText)
+                .addGap(18, 18, 18)
+                .addComponent(equalsText)
+                .addGap(12, 12, 12)
+                .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(686, 686, 686)
+                .addComponent(nextInstructionsText, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(nextButton))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(200, 200, 200)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(jLabel3)
-                        .addGap(86, 86, 86))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(taskTimerText)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(23, 23, 23)))
-                        .addGap(62, 62, 62)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(equalsText)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
+                    .addComponent(taskTimerText)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel1)))
+                .addGap(62, 62, 62)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(questionText)
-                    .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 531, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(equalsText)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(answerTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(531, 531, 531)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nextInstructionsText, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nextButton))
-                .addGap(86, 86, 86))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(nextButton))))
         );
 
         pack();
@@ -196,12 +194,13 @@ public class MathSessionTwoPage extends javax.swing.JFrame {
                     System.out.println("Before timer cancel: " + String.valueOf(secondsLeft));
                     timer.cancel();
                     System.out.println("Timer cancelled");
-                    secondsLeft = 10;
+                    secondsLeft = 12;
                     System.out.println("Seconds left reset");   
                     //generateProblem();
                     problemCounter++;
                     if (problemCounter < questionSet.length){
                     
+                    answerTextBox.setText("");
                     displayProblem(problemCounter);
                     System.out.println("Problem regenerated");
                     taskTimerText.setText(String.valueOf(secondsLeft));
