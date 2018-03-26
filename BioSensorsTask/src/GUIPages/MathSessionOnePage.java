@@ -19,25 +19,29 @@ public class MathSessionOnePage extends javax.swing.JFrame {
     /**
      * Creates new form SessionTwoMathPage
      */
-    
     int secondsLeft = 10;
     public Timer timer;
     public TimerTask timerTask;
     int problemCounter = 0;
-    
+
     String answerString = "Your answer";
-    Color[] answerColors = new Color[]{Color.red, Color.CYAN, Color.BLUE, Color.PINK, Color.orange, Color.MAGENTA, 
-        Color.red, Color.CYAN, Color.BLUE, Color.PINK, Color.orange, Color.MAGENTA, 
+    Color[] answerColors = new Color[]{Color.red, Color.CYAN, Color.BLUE, Color.PINK, Color.orange, Color.MAGENTA,
+        Color.red, Color.CYAN, Color.BLUE, Color.PINK, Color.orange, Color.MAGENTA,
         Color.red, Color.CYAN, Color.BLUE, Color.PINK, Color.orange, Color.MAGENTA,
         Color.red, Color.CYAN, Color.BLUE, Color.PINK, Color.orange, Color.MAGENTA};
-    
-    
+
+    String[] changingNumbers = new String[]{"2549", "5745", "3521", "4987"};
+
     public MathSessionOnePage() {
         initComponents();
+        instructionText.setVisible(false);
+        answerField.setVisible(false);
         mathTwoTimer.setText(String.valueOf(secondsLeft));
         changingNumber.setForeground(Color.BLACK);
+        changingNumber.setText(changingNumbers[0]);
         startTaskTimer();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,6 +59,8 @@ public class MathSessionOnePage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         mathTwoTimer = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        answerField = new javax.swing.JTextField();
+        instructionText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1900, 900));
@@ -81,15 +87,12 @@ public class MathSessionOnePage extends javax.swing.JFrame {
 
         jLabel6.setText("seconds left");
 
+        instructionText.setText("Please enter your final answer in the textbox below.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(560, 560, 560)
-                .addComponent(mathTwoTimer)
-                .addGap(12, 12, 12)
-                .addComponent(jLabel6))
             .addGroup(layout.createSequentialGroup()
                 .addGap(310, 310, 310)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -104,6 +107,20 @@ public class MathSessionOnePage extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(11, 11, 11)
                 .addComponent(changingAnswer))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(answerField, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(375, 375, 375))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(instructionText)
+                        .addGap(256, 256, 256))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(mathTwoTimer)
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel6)
+                        .addGap(343, 343, 343))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +139,12 @@ public class MathSessionOnePage extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
-                    .addComponent(changingAnswer)))
+                    .addComponent(changingAnswer))
+                .addGap(70, 70, 70)
+                .addComponent(instructionText)
+                .addGap(18, 18, 18)
+                .addComponent(answerField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
 
         pack();
@@ -165,8 +187,10 @@ public class MathSessionOnePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField answerField;
     private javax.swing.JLabel changingAnswer;
     private javax.swing.JLabel changingNumber;
+    private javax.swing.JLabel instructionText;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -175,8 +199,7 @@ public class MathSessionOnePage extends javax.swing.JFrame {
     private javax.swing.JLabel mathTwoTimer;
     // End of variables declaration//GEN-END:variables
 
-
-private void startTaskTimer() {
+    private void startTaskTimer() {
         System.out.println("Timer task started");
 
         timer = new Timer();
@@ -190,27 +213,59 @@ private void startTaskTimer() {
                     timer.cancel();
                     System.out.println("Timer cancelled");
                     secondsLeft = 10;
-                    System.out.println("Seconds left reset");   
+                    System.out.println("Seconds left reset");
                     //generateProblem();
                     problemCounter++;
-                    if (problemCounter < answerColors.length){
-                    
-                    displayProblem(problemCounter);
-                    System.out.println("Problem regenerated");
-                    mathTwoTimer.setText(String.valueOf(secondsLeft));
-                    startTaskTimer();
+                    if (problemCounter < answerColors.length) {
+
+                        if (problemCounter == 5 || problemCounter == 11 || problemCounter == 17
+                                || problemCounter == 23) {
+
+                            answerField.setText("");
+                            instructionText.setVisible(true);
+                            answerField.setVisible(true);
+
+                        } else if (problemCounter == 6) {
+
+                            changingNumber.setText(changingNumbers[1]);
+                            instructionText.setVisible(false);
+                            answerField.setVisible(false);
+
+                        } else if (problemCounter == 12) {
+
+                            changingNumber.setText(changingNumbers[2]);
+                            instructionText.setVisible(false);
+                            answerField.setVisible(false);
+
+                        } else if (problemCounter == 18) {
+
+                            changingNumber.setText(changingNumbers[3]);
+                            instructionText.setVisible(false);
+                            answerField.setVisible(false);
+
+                        } else if (problemCounter == 24) {
+
+                            //do nothing
+                        } else {
+
+                            changingNumber.setText("Your answer");
+
+                        }
+
+                        displayProblem(problemCounter);
+                        System.out.println("Problem regenerated");
+                        mathTwoTimer.setText(String.valueOf(secondsLeft));
+                        startTaskTimer();
                     } else {
-                    
+
                         System.out.println("Problem set maxed out. Cannot display any more questions");
 //                        displayNextInstructionsText();
 //                        questionText.setText("Task has been completed!");
 //                        answerTextBox.setVisible(false);
 //                        equalsText.setVisible(false);
                     }
-                    
-                    //startTimer();
-                       
 
+                    //startTimer();
                 } else {
 
                     //set text for timer here
@@ -224,12 +279,10 @@ private void startTaskTimer() {
         timer.scheduleAtFixedRate(timerTask, 1000, 1000);
     }
 
+    private void displayProblem(int i) {
 
-    private void displayProblem(int i){
-        
-        changingNumber.setText("Your answer");
+        //changingNumber.setText("Your answer");
         changingNumber.setForeground(answerColors[i]);
-    
-    
+
     }
 }
