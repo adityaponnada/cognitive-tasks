@@ -48,8 +48,8 @@ public class SurveyPage extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 102, 153));
         jLabel2.setText("Let an experimenter know when you're done with the survey (to receive candy).");
 
-        jButton1.setForeground(new java.awt.Color(153, 102, 255));
-        jButton1.setText("TesterButton");
+        jButton1.setForeground(new java.awt.Color(0, 102, 153));
+        jButton1.setText("Take Survey");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -63,12 +63,12 @@ public class SurveyPage extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(300, 300, 300)
+                        .addGap(375, 375, 375)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(600, 600, 600)
+                        .addGap(575, 575, 575)
                         .addComponent(jButton1)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
@@ -89,10 +89,7 @@ public class SurveyPage extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
             // TODO add your handling code here:
-//        System.out.println("Testing GUI forms"); //to be replaced later
-//        RelaxPage relaxPage = new RelaxPage();
-//        relaxPage.setVisible(true);
-        openSurvey("https://stackoverflow.com/questions/2966334/how-do-i-set-the-colour-of-a-label-coloured-text-in-java");
+        openSurvey("https://neu.co1.qualtrics.com/jfe/form/SV_3eg9hktP9Dj9Ml7");
         } catch (IOException ex) {
             Logger.getLogger(SurveyPage.class.getName()).log(Level.SEVERE, null, ex);
         }
