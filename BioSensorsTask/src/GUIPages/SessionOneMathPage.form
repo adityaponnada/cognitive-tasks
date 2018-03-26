@@ -51,7 +51,7 @@
                       <Component id="nextButton" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="888" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="723" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -81,7 +81,7 @@
                   <Component id="questionText" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="answerTextBox" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="90" max="32767" attributes="0"/>
+              <EmptySpace pref="531" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="nextInstructionsText" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="nextButton" alignment="3" min="-2" max="-2" attributes="0"/>

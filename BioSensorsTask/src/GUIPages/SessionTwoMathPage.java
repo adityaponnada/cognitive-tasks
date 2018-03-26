@@ -98,7 +98,7 @@ public class SessionTwoMathPage extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
                         .addComponent(changingAnswer)))
-                .addContainerGap(378, Short.MAX_VALUE))
+                .addContainerGap(506, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(mathTwoTimer)
@@ -122,7 +122,7 @@ public class SessionTwoMathPage extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(changingAnswer))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(612, Short.MAX_VALUE))
         );
 
         pack();
@@ -231,8 +231,4 @@ private void startTaskTimer() {
     
     
     }
-
-
-
-
 }
