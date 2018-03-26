@@ -5,17 +5,26 @@
  */
 package GUIPages;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  *
  * @author catalinacumpanasoiu1
  */
 public class RelaxPage extends javax.swing.JFrame {
 
+    
+    int secondsLeft = 5;
+    public Timer timer;
+    public TimerTask timerTask;
+    
     /**
      * Creates new form RelaxPage
      */
     public RelaxPage() {
         initComponents();
+        startTaskTimer();
     }
 
     /**
@@ -103,6 +112,63 @@ public class RelaxPage extends javax.swing.JFrame {
                 new RelaxPage().setVisible(true);
             }
         });
+    }
+
+    private void startTaskTimer() {
+        System.out.println("Timer task started");
+
+        timer = new Timer();
+        timerTask = new TimerTask() {
+            public void run() {
+                secondsLeft--;
+                System.out.println("Before checking timer: " + String.valueOf(secondsLeft));
+                if (secondsLeft <= 0) {
+                    System.out.println("PHASE in Relax is: " + Constants.PHASE);
+                    // code below to be doen when relax ends
+                    if (Constants.PHASE=="first"){
+                        if(Constants.CONDITION=="A" || Constants.CONDITION == "B"){
+                            StressOneInstructions stressOneInstr = new StressOneInstructions();
+                            stressOneInstr.setVisible(true);
+                            disposePage();
+                            //this.dispose();
+                        } else{
+                            StressTwoInstructions stressTwoInstr = new StressTwoInstructions();
+                            stressTwoInstr.setVisible(true);
+                            disposePage();
+                            //this.dispose();
+                        }
+                    }
+                    else if (Constants.PHASE=="second"){
+                        if(Constants.CONDITION=="A" || Constants.CONDITION == "B"){
+                            StressTwoInstructions stressTwoInstr = new StressTwoInstructions();
+                            stressTwoInstr.setVisible(true);
+                            disposePage();
+                            //this.dispose();
+                        } else{
+                            StressOneInstructions stressOneInstr = new StressOneInstructions();
+                            stressOneInstr.setVisible(true);
+                            disposePage();
+                            //this.dispose();
+                        }
+                    }
+                    
+                    System.out.println("Before timer cancel: " + String.valueOf(secondsLeft));
+                    timer.cancel();
+                    System.out.println("Timer cancelled");
+ 
+                } else {
+                    //set text for timer here
+                    System.out.println("After checking timer: " + String.valueOf(secondsLeft));        
+                }
+
+            }
+        };
+        timer.scheduleAtFixedRate(timerTask, 1000, 1000);
+    }
+    
+    private void disposePage(){
+    this.dispose();
+    
     }
 
     

@@ -96,13 +96,8 @@ public class GUIMainPage extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         System.out.println("Testing GUI forms"); //to be replaced later
-        //SessionOneMatchPage sessionOneMathPage = new SessionOneMatchPage();
-        //sessionOneMathPage.setVisible(true);
-        //RelaxPage relaxPage = new RelaxPage();
-        //relaxPage.setVisible(true);
-        ConditionPage conditionPage = new ConditionPage();
-        conditionPage.setVisible(true);
-        this.dispose();
+        RelaxPage relaxPage = new RelaxPage();
+        relaxPage.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

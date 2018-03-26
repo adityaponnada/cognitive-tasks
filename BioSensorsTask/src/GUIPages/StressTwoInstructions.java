@@ -103,11 +103,31 @@ public class StressTwoInstructions extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         System.out.println("Testing GUI forms"); //to be replaced later
-        //SessionOneMatchPage sessionOneMathPage = new SessionOneMatchPage();
-        //sessionOneMathPage.setVisible(true);
-        AppOneInstructions appOneInstr = new AppOneInstructions();
-        appOneInstr.setVisible(true);
-        this.dispose();
+        //MathSessionTwoPage mathSessTwoPage = new MathSessionTwoPage();
+        //mathSessTwoPage.setVisible(true);
+        //code below goes in timer on MathSessionTwoPage
+        System.out.println("PHASE in StressTwo is: " + Constants.PHASE);
+        if (Constants.PHASE=="first"){
+            if(Constants.CONDITION=="C"){
+                AppOneInstructions appOneInstr = new AppOneInstructions();
+                appOneInstr.setVisible(true);
+                this.dispose();
+            } else if(Constants.CONDITION=="D"){
+                AppTwoInstructions appTwoInstr = new AppTwoInstructions();
+                appTwoInstr.setVisible(true);
+                this.dispose();
+            }
+        }else if (Constants.PHASE=="second"){
+            if(Constants.CONDITION=="A"){
+                AppTwoInstructions appTwoInstr = new AppTwoInstructions();
+                appTwoInstr.setVisible(true);
+                this.dispose();
+            } else if(Constants.CONDITION=="B"){
+                AppOneInstructions appOneInstr = new AppOneInstructions();
+                appOneInstr.setVisible(true);
+                this.dispose();
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
