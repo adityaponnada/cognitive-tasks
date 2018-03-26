@@ -49,7 +49,7 @@ public class AppOneInstructions extends javax.swing.JFrame {
         jLabel1.setText("Below you'll see instructions on how to use the Breathing Timer feature from the app called \"Stop, Breathe and Think\". You can open app now on the phone provided. ");
 
         jLabel2.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel2.setText("You will then have 5 minutes to try this feature. When you're ready to start it, please press the \"Ready\" button and then start your session as well (see instructions below). ");
+        jLabel2.setText("You will then have 5 minutes to try this feature. Follow instructions to access feature on phone. Click \"Ready\" when you see last screen from below and you're ready to use app.");
 
         jLabel3.setForeground(new java.awt.Color(0, 102, 153));
         jLabel3.setText("We will ask you some questions about the app later on so please use the given time to engage with this feature. At the end of the 5 minutes, you'll receive further instructions. ");

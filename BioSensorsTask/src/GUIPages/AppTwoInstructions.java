@@ -52,7 +52,7 @@ public class AppTwoInstructions extends javax.swing.JFrame {
         jLabel1.setText("Below you'll see instructions on how to use the Mindful Breathing feature from the app called \"Stop, Breathe and Think\". You can open app now on the phone provided.");
 
         jLabel2.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel2.setText("You will then have 5 minutes to try this feature. When you're ready to start it, please press the \"Ready\" button and then start your session as well (play button, see below). ");
+        jLabel2.setText("You will then have 5 minutes to try this feature. Follow instructions to access feature on phone. Click \"Ready\" when you see last screen from below and you're ready to use app.");
 
         jLabel3.setForeground(new java.awt.Color(0, 102, 153));
         jLabel3.setText("We will ask you some questions about the app later on so please use the given time to engage with this feature. At the end of the 5 minutes, you'll receive further instructions. ");
@@ -112,13 +112,10 @@ public class AppTwoInstructions extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
+                                .addGap(37, 37, 37)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(37, 37, 37)
-                                        .addComponent(jLabel11))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(37, 37, 37)
-                                        .addComponent(jLabel10)))
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel10))
                                 .addGap(42, 42, 42)
                                 .addComponent(jLabel12)
                                 .addGap(81, 81, 81))

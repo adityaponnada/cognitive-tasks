@@ -103,9 +103,9 @@ public class StressOneInstructions extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         System.out.println("Testing GUI forms"); //to be replaced later
-        //MathSessionOnePage mathSessOnePage = new MathSessionOnePage();
-        //mathSessOnePage.setVisible(true);
-        //code below goes in timer on MathSessionOnePage
+        MathSessionOnePage mathSessOnePage = new MathSessionOnePage();
+        mathSessOnePage.setVisible(true);
+        /*code below goes in timer on MathSessionOnePage
         System.out.println("PHASE in StressOne is: " + Constants.PHASE);
         if (Constants.PHASE=="first"){
             if(Constants.CONDITION=="A"){
@@ -127,7 +127,7 @@ public class StressOneInstructions extends javax.swing.JFrame {
                 appOneInstr.setVisible(true);
                 this.dispose();
             }
-        }
+        }*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

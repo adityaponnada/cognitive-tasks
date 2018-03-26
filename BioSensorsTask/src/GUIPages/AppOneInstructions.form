@@ -119,7 +119,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="66" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="You will then have 5 minutes to try this feature. When you&apos;re ready to start it, please press the &quot;Ready&quot; button and then start your session as well (see instructions below). "/>
+        <Property name="text" type="java.lang.String" value="You will then have 5 minutes to try this feature. Follow instructions to access feature on phone. Click &quot;Ready&quot; when you see last screen from below and you&apos;re ready to use app."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">

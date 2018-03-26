@@ -207,8 +207,9 @@ public class MathSessionTwoPage extends javax.swing.JFrame {
                     startTaskTimer();
                     } else {
                     
+                        continuePage();
                         System.out.println("Problem set maxed out. Cannot display any more questions");
-                        displayNextInstructionsText();
+                        //displayNextInstructionsText();
                         questionText.setText("Task has been completed!");
                         answerTextBox.setVisible(false);
                         equalsText.setVisible(false);
@@ -284,4 +285,29 @@ public class MathSessionTwoPage extends javax.swing.JFrame {
     
     }
 
+    private void continuePage(){
+        //code below goes in timer on MathSessionTwoPage
+        System.out.println("PHASE in StressTwo is: " + Constants.PHASE);
+        if (Constants.PHASE=="first"){
+            if(Constants.CONDITION=="C"){
+                AppOneInstructions appOneInstr = new AppOneInstructions();
+                appOneInstr.setVisible(true);
+                this.dispose();
+            } else if(Constants.CONDITION=="D"){
+                AppTwoInstructions appTwoInstr = new AppTwoInstructions();
+                appTwoInstr.setVisible(true);
+                this.dispose();
+            }
+        }else if (Constants.PHASE=="second"){
+            if(Constants.CONDITION=="A"){
+                AppTwoInstructions appTwoInstr = new AppTwoInstructions();
+                appTwoInstr.setVisible(true);
+                this.dispose();
+            } else if(Constants.CONDITION=="B"){
+                AppOneInstructions appOneInstr = new AppOneInstructions();
+                appOneInstr.setVisible(true);
+                this.dispose();
+            }
+        }
+    }
 }
