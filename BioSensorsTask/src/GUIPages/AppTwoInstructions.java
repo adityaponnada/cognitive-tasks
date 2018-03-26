@@ -196,12 +196,9 @@ public class AppTwoInstructions extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        // start 5 minute timer (same page displayed; timer not shown)
         System.out.println("Testing GUI forms"); //to be replaced later
-        //SessionOneMatchPage sessionOneMathPage = new SessionOneMatchPage();
-        //sessionOneMathPage.setVisible(true);
-        UsingAppPage useAppPage = new UsingAppPage();
-        useAppPage.setVisible(true);
+        UsingAppPage usingAppPage = new UsingAppPage();
+        usingAppPage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

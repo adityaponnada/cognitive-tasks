@@ -5,17 +5,34 @@
  */
 package GUIPages;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  *
  * @author catalinacumpanasoiu1
  */
 public class UsingAppPage extends javax.swing.JFrame {
 
+    int secondsLeft = 5;
+    public Timer timer;
+    public TimerTask timerTask;
+    
     /**
      * Creates new form UsingAppPage
      */
     public UsingAppPage() {
         initComponents();
+        usingAppTimer.setText(String.valueOf(secondsLeft));
+       
+        System.out.println("PHASE in usingApp is: " + Constants.PHASE);
+        if(Constants.PHASE == "first"){
+            Constants.PHASE = "second";
+        } else if(Constants.PHASE == "second"){
+            Constants.PHASE = "done";
+        }
+        
+        startTaskTimer();
     }
 
     /**
@@ -28,21 +45,16 @@ public class UsingAppPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        usingAppTimer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1900, 900));
 
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel1.setText("Time remaining to use app: (show timer)");
+        jLabel1.setText("Time remaining to use app:");
 
-        jButton1.setForeground(new java.awt.Color(255, 0, 204));
-        jButton1.setText("TesterButton");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        usingAppTimer.setFont(new java.awt.Font("Lucida Grande", 1, 30)); // NOI18N
+        usingAppTimer.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,32 +63,22 @@ public class UsingAppPage extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(300, 300, 300)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(600, 600, 600)
-                .addComponent(jButton1)
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addGap(50, 50, 50)
+                .addComponent(usingAppTimer)
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(300, 300, 300)
-                .addComponent(jLabel1)
-                .addGap(50, 50, 50)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(usingAppTimer))
+                .addGap(85, 85, 85))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        System.out.println("Testing GUI forms"); //to be replaced later
-        SurveyPage surveyPage = new SurveyPage();
-        surveyPage.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,9 +114,50 @@ public class UsingAppPage extends javax.swing.JFrame {
             }
         });
     }
+private void startTaskTimer() {
+        System.out.println("Timer task started");
 
+        timer = new Timer();
+        timerTask = new TimerTask() {
+            public void run() {
+                secondsLeft--;
+                System.out.println("Before checking timer: " + String.valueOf(secondsLeft));
+                if (secondsLeft <= 0) {
+                        if(Constants.PHASE == "second"){
+                            RelaxPage relaxPage = new RelaxPage();
+                            relaxPage.setVisible(true);
+                            disposePage();
+                            //this.dispose();
+                        } else if(Constants.PHASE == "done"){
+                            SurveyPage surveyPage = new SurveyPage();
+                            surveyPage.setVisible(true);
+                             disposePage();
+                            //this.dispose();
+                        }
+
+                    System.out.println("Before timer cancel: " + String.valueOf(secondsLeft));
+                    timer.cancel();
+                    System.out.println("Timer cancelled");
+ 
+                } else{
+                    //set text for timer here
+                    System.out.println("After checking timer: " + String.valueOf(secondsLeft));
+                    usingAppTimer.setText(String.valueOf(secondsLeft));
+                }
+            }
+
+        };
+        timer.scheduleAtFixedRate(timerTask, 1000, 1000);
+    }
+    
+    private void disposePage(){
+    this.dispose();
+    
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel usingAppTimer;
     // End of variables declaration//GEN-END:variables
 }

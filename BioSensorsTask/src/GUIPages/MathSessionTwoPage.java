@@ -13,7 +13,7 @@ import java.util.TimerTask;
  *
  * @author Dharam
  */
-public class SessionOneMathPage extends javax.swing.JFrame {
+public class MathSessionTwoPage extends javax.swing.JFrame {
 
     /**
      * Creates new form SessionOneMatchPage
@@ -29,7 +29,7 @@ public class SessionOneMathPage extends javax.swing.JFrame {
         "22 X 6 - 13", "14 X 7 - 15", "18 X 5 - 19", "31 X 7 - 19", "13 X 8 - 17", "23 X 7 - 13", 
         "17 X 6 - 17", "37 X 3 - 13", "18 X 9 - 19", "26 X 7 - 15", "13 X 9 - 17", "29 X 4 - 19"};
 
-    public SessionOneMathPage() {
+    public MathSessionTwoPage() {
         initComponents();
         //generateProblem();
         nextButton.setVisible(false);
@@ -151,21 +151,23 @@ public class SessionOneMathPage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SessionOneMathPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MathSessionTwoPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SessionOneMathPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MathSessionTwoPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SessionOneMathPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MathSessionTwoPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SessionOneMathPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MathSessionTwoPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SessionOneMathPage().setVisible(true);
+                new MathSessionTwoPage().setVisible(true);
             }
         });
     }
