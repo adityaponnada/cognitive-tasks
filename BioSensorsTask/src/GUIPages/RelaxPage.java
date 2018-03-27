@@ -15,7 +15,7 @@ import java.util.TimerTask;
 public class RelaxPage extends javax.swing.JFrame {
 
     
-    int secondsLeft = 5;
+    int secondsLeft = 180;
     public Timer timer;
     public TimerTask timerTask;
     
