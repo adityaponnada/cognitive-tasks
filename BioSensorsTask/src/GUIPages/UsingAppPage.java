@@ -14,7 +14,7 @@ import java.util.TimerTask;
  */
 public class UsingAppPage extends javax.swing.JFrame {
 
-    int secondsLeft = 5;
+    int secondsLeft = 300;
     public Timer timer;
     public TimerTask timerTask;
     
