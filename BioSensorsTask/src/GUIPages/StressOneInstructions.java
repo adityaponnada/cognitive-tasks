@@ -47,7 +47,7 @@ public class StressOneInstructions extends javax.swing.JFrame {
         jLabel3.setText("Each operation is timed and you will see the timer on the screen. When time runs out, you will see the next problem.");
 
         jLabel4.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel4.setText("Your answers will be compared to a known batabase and based on your performance, you will receive a prize (candy) at the end.");
+        jLabel4.setText("Your answers will be compared to a known database and based on your performance, you will receive a prize (candy) at the end.");
 
         jLabel5.setForeground(new java.awt.Color(0, 102, 153));
         jLabel5.setText("If you missed one problem, don't worry. Just try your best to answer correctly as many as you can!");
